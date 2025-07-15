@@ -6,14 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 class CarouselItemDataSourceProvider: CarouselItemDataSourceProviderType {
+    private let imageList  = ["butcher" , "frenchie", "hughei" , "mm"]
+    
+    private lazy var carouselList: [CarouselItem] = {
+        return imageList.map {HeroCarouselItem(imageName: $0)}
+    }()
+    
+    
     func items() -> [CarouselItem] {
-        return [
-            HomeLanderCarouselItem(),
-            MaeveCarouselItem(),
-            BlackNoirCarouselItem(),
-            ATrainCarouselItem(),
-        ]
+        return carouselList
     }
 }
+
