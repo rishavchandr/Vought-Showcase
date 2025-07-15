@@ -35,17 +35,23 @@ final class CarouselViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initPageViewController()
-        initPogressBar()
+        
         applyGesture()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initProgressBar()
     }
 
     /// Initialize progress Bar
-    private func initPogressBar() {
+    private func initProgressBar() {
         progressBar = SegmentedProgressBar(numberOfSegments: items.count,duration: 10)
         view.addSubview(progressBar)
         progressBar.delegate = self
         progressBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 6)
         progressBar.translatesAutoresizingMaskIntoConstraints = false
+        
         
         let progressBarConstraint = [
             progressBar.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 2),
@@ -98,6 +104,10 @@ final class CarouselViewController: UIViewController {
         
         let longPressedGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressed(_:)))
         containerView.addGestureRecognizer(longPressedGesture)
+        
+        let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        swipeDownGesture.direction = .down
+        containerView.addGestureRecognizer(swipeDownGesture)
     }
     
     
@@ -122,6 +132,10 @@ final class CarouselViewController: UIViewController {
         }
     }
     
+    @objc private func handleSwipe(_ gesture: UISwipeGestureRecognizer) {
+        self.dismiss(animated: true)
+    }
+    
     /// Get controller at index
     /// - Parameter index: Index of the controller
     /// - Returns: UIViewController
@@ -142,7 +156,7 @@ extension CarouselViewController : SegmentedProgressBarDelegate {
     }
     
     func segmentedProgressBarFinished() {
-        
+        self.dismiss(animated: true)
     }
 }
 
