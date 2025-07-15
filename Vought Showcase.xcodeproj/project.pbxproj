@@ -28,6 +28,7 @@
 		5E87DC912C6232440005D86C /* Vought_ShowcaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87DC902C6232440005D86C /* Vought_ShowcaseUITestsLaunchTests.swift */; };
 		5E87DCA02C6236A30005D86C /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87DC9F2C6236A30005D86C /* CarouselViewController.swift */; };
 		5E87DCA22C62375E0005D86C /* CarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E87DCA12C62375E0005D86C /* CarouselViewController.xib */; };
+		6CF175AE2E26CBF700115A33 /* HeroCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF175AD2E26CBE100115A33 /* HeroCarouselItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		5E87DC902C6232440005D86C /* Vought_ShowcaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vought_ShowcaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5E87DC9F2C6236A30005D86C /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		5E87DCA12C62375E0005D86C /* CarouselViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselViewController.xib; sourceTree = "<group>"; };
+		6CF175AD2E26CBE100115A33 /* HeroCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCarouselItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		5E1E354B2C624BF4000D7DEF /* CarouselItems */ = {
 			isa = PBXGroup;
 			children = (
+				6CF175AD2E26CBE100115A33 /* HeroCarouselItem.swift */,
 				5E1E35432C62497D000D7DEF /* HomeLanderCarouselItem.swift */,
 				5E1E35452C624AB9000D7DEF /* MaeveCarouselItem.swift */,
 				5E1E35472C624B31000D7DEF /* BlackNoirCarouselItem.swift */,
@@ -365,6 +368,7 @@
 				5E1E353F2C6247C5000D7DEF /* ImageViewController.swift in Sources */,
 				5E87DC702C6232430005D86C /* SceneDelegate.swift in Sources */,
 				5E1E35572C634D75000D7DEF /* SegmentedProgressBar.swift in Sources */,
+				6CF175AE2E26CBF700115A33 /* HeroCarouselItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
